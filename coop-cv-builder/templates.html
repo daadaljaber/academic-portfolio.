@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COOP CV Builder | Templates</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="templates">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">COOP CV Builder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="home" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="cvbuilder" href="CVBuilder.html">CV Builder</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="templates" href="templates.html">Templates</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="opportunities" href="Opportunities.html">Opportunities</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="database" href="Database.html">Manage Students</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="tips" href="Tips.html">Tips</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Quick Menu</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="Download.html">Preview & Download</a></li>
+              <li><a class="dropdown-item" href="CVBuilder.html">Edit CV</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <div class="page-header p-4 p-md-5 mb-4 text-center">
+      <p class="mb-2"> Templates </p>
+      <h1 class="mb-0">Choose Your Template</h1>
+    </div>
+
+    <div class="row g-4 mb-4" id="templates-grid">
+      <div class="col-12">
+        <div class="template-card bg-white p-4 text-center">
+          <p class="text-muted mb-0">Loading templates from the database...</p>
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="Template pagination">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a class="page-link">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="footer mt-5 py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6"><h3>COOP & Internship</h3><p>Pick a template that suits your profile.</p></div>
+        <div class="col-md-3"><h5>Useful Links</h5><ul class="list-unstyled"><li><a href="home.html">Home</a></li><li><a href="CVBuilder.html">CV Builder</a></li></ul></div>
+        <div class="col-md-3"><h5>Continue</h5><a href="Download.html" class="btn btn-outline-light">Preview CV</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

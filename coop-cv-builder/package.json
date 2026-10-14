@@ -1,0 +1,14 @@
+{
+  "name": "coop-cv-builder-phase4",
+  "version": "1.0.0",
+  "description": "IS311 course project phase 4 using Node.js and MySQL CRUD operations.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.3"
+  }
+}

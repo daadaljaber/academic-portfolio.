@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COOP CV Builder | CV Builder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="cvbuilder">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">COOP CV Builder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="home" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="cvbuilder" href="CVBuilder.html">CV Builder</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="templates" href="templates.html">Templates</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="opportunities" href="Opportunities.html">Opportunities</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="database" href="Database.html">Manage Students</a></li>
+          <li class="nav-item"><a class="nav-link main-nav-link" data-page="tips" href="Tips.html">Tips</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="Download.html">Preview & Download</a></li>
+              <li><a class="dropdown-item" href="templates.html">Choose Template</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <div class="page-header p-4 p-md-5 mb-4">
+      <h1 class="mb-2">CV Builder</h1>
+      <p class="mb-0">Fill in the form below to create a clear and organized CV for COOP applications.</p>
+    </div>
+
+    <div class="form-card p-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div class="template-status" id="selected-template-status">Selected template: loading...</div>
+        <button class="btn btn-sm btn-outline-secondary" id="start-new-cv" type="button">Start New CV</button>
+      </div>
+      <ul class="nav nav-pills mb-4" id="cvTabs" role="tablist">
+        <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#personal" type="button">Personal Info</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#education" type="button">Education</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#skills" type="button">Skills</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#experience" type="button">Experience</button></li>
+      </ul>
+
+      <form id="cv-form">
+        <input type="hidden" id="current-student-id" name="current_student_id">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="personal">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="full-name">Full Name</label>
+                <input type="text" class="form-control" id="full-name" name="full_name" placeholder="Enter your full name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="phone-number">Phone Number</label>
+                <input type="tel" class="form-control" id="phone-number" name="phone_number" placeholder="05XXXXXXXX" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="city">City</label>
+                <input type="text" class="form-control" id="city" name="city" placeholder="Riyadh" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="professional-summary">Professional Summary</label>
+                <textarea class="form-control" id="professional-summary" name="professional_summary" rows="4" placeholder="Write a short summary about yourself" required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="education">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="university-name">University</label>
+                <input type="text" class="form-control" id="university-name" name="university_name" placeholder="Prince Sultan University" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="major">Major</label>
+                <input type="text" class="form-control" id="major" name="major" placeholder="Information Systems" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="degree-level">Degree</label>
+                <select class="form-select" id="degree-level" name="degree_level" required>
+                  <option selected value="Bachelor's">Bachelor's</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Master's">Master's</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="gpa">GPA</label>
+                <input type="text" class="form-control" id="gpa" name="gpa" placeholder="4.5 / 5" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="expected-graduation">Expected Graduation</label>
+                <input type="month" class="form-control" id="expected-graduation" name="expected_graduation" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="skills">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="technical-skills">Technical Skills</label>
+                <textarea class="form-control" id="technical-skills" name="technical_skills" rows="4" placeholder="HTML, CSS, Bootstrap, JavaScript..." required></textarea>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="soft-skills">Soft Skills</label>
+                <textarea class="form-control" id="soft-skills" name="soft_skills" rows="4" placeholder="Communication, teamwork, time management..." required></textarea>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="portfolio-link">Portfolio Link</label>
+                <input type="url" class="form-control" id="portfolio-link" name="portfolio_link" placeholder="https://...">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="linkedin-link">LinkedIn</label>
+                <input type="url" class="form-control" id="linkedin-link" name="linkedin_link" placeholder="https://linkedin.com/in/...">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="experience">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="experience-title">Internship / Project Title</label>
+                <input type="text" class="form-control" id="experience-title" name="experience_title" placeholder="Web Development Project" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="organization-name">Organization / Course</label>
+                <input type="text" class="form-control" id="organization-name" name="organization_name" placeholder="IS311 Web Development" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="experience-description">Description</label>
+                <textarea class="form-control" id="experience-description" name="experience_description" rows="4" placeholder="Describe your achievements and responsibilities" required></textarea>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="availability">Availability</label>
+                <select class="form-select" id="availability" name="availability" required>
+                  <option value="Full-time COOP">Full-time COOP</option>
+                  <option value="Part-time Internship">Part-time Internship</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="preferred-industry">Preferred Industry</label>
+                <input type="text" class="form-control" id="preferred-industry" name="preferred_industry" placeholder="Technology / Cybersecurity" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <button type="submit" class="btn btn-primary">Save CV</button>
+          <a href="Download.html" class="btn btn-outline-dark">Preview</a>
+          <a href="Database.html" class="btn btn-outline-secondary">Manage Records</a>
+        </div>
+        <div class="alert d-none mt-4" id="cv-form-feedback" role="alert"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer mt-5 py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6"><h3>COOP & Internship</h3><p>Create your CV with a structured form.</p></div>
+        <div class="col-md-3"><h5>Links</h5><ul class="list-unstyled"><li><a href="home.html">Home</a></li><li><a href="templates.html">Templates</a></li></ul></div>
+        <div class="col-md-3"><h5>Next Step</h5><a href="Download.html" class="btn btn-outline-light">Preview CV</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
