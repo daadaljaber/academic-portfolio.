@@ -15,3 +15,7 @@ Projects spanning web development, security risk analysis, business analysis, da
 | [Project Management Planning](project-management-planning/) | IS361 | Resource allocation, cost estimates and scheduling artifacts from the supplied project folder. |
 
 These are academic projects, including team assignments. Original team credits remain in the deliverables.
+
+## Cybersecurity training notes
+
+[Tuwaiq Academy SOC Program — 10-day study notes](tuwaiq-soc-notes/) · Bilingual notes covering SOC fundamentals, SIEM, threat intelligence, incident response and lab practice.
